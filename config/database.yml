@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: <%= ENV['WORDBRUSH_DATABASE_USERNAME'] %>
+  password: <%= ENV['WORDBRUSH_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: wordbrush_development
+
+test:
+  <<: *default
+  database: wordbrush_test
+
+production:
+  <<: *default
+  database: wordbrush_production
+  username: wordbrush
