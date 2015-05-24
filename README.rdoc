@@ -7,4 +7,4 @@ Example of user authentication with activation code.
 0. Click on "user code" link - it redirects you to registration form
 0. Choose the authentication question and fill the answer field in. Username is optional.
 
-Now every time when you click on "user code" link that looks like `/sessions/:activation_code`, it redirects you to the new session path and you will be able to login only with answer you set during registration process.
+Now every time when you click on "user code" link that looks like `/sessions/:activation_code` , it redirects you to the new session path and you will be able to login only with answer you set during registration process.
