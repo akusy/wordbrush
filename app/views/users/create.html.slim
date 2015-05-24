@@ -1,1 +1,4 @@
-
+.page-header
+  h1 New user
+p.lead Click link to redirect to registration.
+p= link_to "User with code: #{@user.activation_code}", new_sessions_path(activation_code: @user.activation_code), class: "btn btn-default"
