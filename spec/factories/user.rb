@@ -4,7 +4,6 @@ FactoryGirl.define do
     sequence(:username) { |n| "user#{n}@example.com" }
     question "Where were you born?"
     answer 'London'
-    role "user"
     active false
   end
 end
