@@ -6,7 +6,10 @@ class RegistrationsController < AuthenticationsController
     if @user.update_attributes(user_registration_params.merge(active: true))
       redirect_to(new_sessions_path(activation_code: params[:activation_code]))
     else
-      redirect_to(new_registrations_path(activation_code: params[:activation_code], errors: @user.errors.full_messages))
+      redirect_to(new_registrations_path(
+        activation_code: params[:activation_code],
+        errors: @user.errors.full_messages
+      ))
     end
   end
 
