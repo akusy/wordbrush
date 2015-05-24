@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Example of user authentication with activation code.
 
-Things you may want to cover:
+0. Go to the root path
+0. Click on 'Generate' new user
+0. Click on "user code" link - it redirects you to registration form
+0. Choose the authentication question and fill the answer field in. Username is optional.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Now every time when you click on "user code" link that looks like `/sessions/:activation_code`, it redirects you to the new session path and you will be able to login only with answer you set during registration process.
