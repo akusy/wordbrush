@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/create'
+
   root :to => "users#new"
 
   get 'registrations/:activation_code' => 'registrations#new', as: 'new_registrations'
