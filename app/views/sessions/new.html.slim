@@ -4,7 +4,7 @@ p.lead= @user.question
 
 = bootstrap_form_tag url: '/sessions' do |f|
   -if @errors
-    .alert.alert-warning
+    .alert.alert-danger
       a href="#" class="close" data-dismiss="alert" &times;
       p = @errors
   = f.text_field :activation_code, value: @user.activation_code, type: :hidden, hide_label: true

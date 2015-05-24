@@ -4,7 +4,7 @@ p.lead Fill the form to complete registration process.
 
 = bootstrap_form_tag url: '/registrations' do |f|
   -if @errors
-    .alert.alert-warning
+    .alert.alert-danger
       a href="#" class="close" data-dismiss="alert" &times;
       .h3
         => pluralize(@errors.count, "error")
