@@ -9,7 +9,7 @@ class SessionsController < AuthenticationsController
   def create
     if @user.answer == params[:answer]
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to users_path
     else
       redirect_to(new_sessions_path(
         activation_code: params[:activation_code],
