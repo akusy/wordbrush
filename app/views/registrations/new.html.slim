@@ -1,2 +1,11 @@
-h1 Registrations#new
-p Find me in app/views/registrations/new.html.slim
+.page-header
+  h1 Registration
+p.lead Fill the form to complete registration process.
+
+= bootstrap_form_tag url: '/registrations' do |f|
+  = f.text_field :activation_code, value: @user.activation_code, type: :hidden, hide_label: true
+  = f.text_field :username, placeholder: "Your name or nick"
+  = f.select :question, User::QUESTIONS, prompt: "Choose authentication question"
+  = f.text_field :answear, placeholder: "Your answer to the question"
+
+  = f.submit
