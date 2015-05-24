@@ -1,5 +1,5 @@
 class AuthenticationsController < ApplicationController
-  before_action :load_user
+  before_action :load_user, except: :destroy
 
   private
 
