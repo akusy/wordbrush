@@ -3,5 +3,9 @@ class UsersController < ApplicationController
   end
 
   def create
+    @user = User.create(activation_code: SecureRandom.hex)
+  end
+
+  def index
   end
 end
