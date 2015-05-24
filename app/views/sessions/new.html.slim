@@ -1,1 +1,13 @@
-h1 = current_user.activation_code
+.page-header
+  h1 Sign in
+p.lead= @user.question
+
+= bootstrap_form_tag url: '/sessions' do |f|
+  -if @errors
+    .alert.alert-warning
+      a href="#" class="close" data-dismiss="alert" &times;
+      p = @errors
+  = f.text_field :activation_code, value: @user.activation_code, type: :hidden, hide_label: true
+  = f.text_field :answer, placeholder: "Your answer", hide_label: true
+
+  = f.submit "Send"
