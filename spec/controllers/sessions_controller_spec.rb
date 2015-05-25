@@ -49,4 +49,19 @@ describe SessionsController do
       end
     end
   end
+
+  describe "#destroy" do
+    let(:user) { create :user }
+
+    before do
+      session[:user_id] = user.id
+      delete :destroy
+    end
+
+    it { is_expected.to redirect_to new_user_path }
+
+    it "clears session" do
+      expect(session[:user_id]).to be_nil
+    end
+  end
 end
