@@ -5,5 +5,11 @@ FactoryGirl.define do
     question "Where were you born?"
     answer 'London'
     active false
+
+    trait :newcomer do
+      username nil
+      question nil
+      answer nil
+    end
   end
 end
